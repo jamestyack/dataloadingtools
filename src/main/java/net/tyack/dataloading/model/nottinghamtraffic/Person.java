@@ -8,7 +8,7 @@ public class Person extends CommonBean {
 	private String severity;
 	private String sex;
 	private String type;
-	private String age;
+	private int age;
 	
 	public int getPersonRef() {
 		return personRef;
@@ -34,10 +34,10 @@ public class Person extends CommonBean {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	

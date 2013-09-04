@@ -1,6 +1,7 @@
 package net.tyack.dataloading.model.nottinghamtraffic;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import net.tyack.dataloading.model.CommonBean;
@@ -12,29 +13,30 @@ import com.github.jmkgreen.morphia.annotations.Id;
 public class Accident extends CommonBean {
 
 	@Id private String id;
-	private String accidentDate;
+	private Date accidentDate;
+	private String severity;
 	private String time;
-	private short year;
+	private int month;
+	private int year;
 	private int numVeh;
-	private String easting;
-	private String northing;
-	private float lat;
-	private float lng;
-	private String body;
-	private String bodyName;
-	private String createDate;
+	private String lat;
+	private String lng;
+	private List<Integer> driverAges = new ArrayList<>();
+	private List<String> driverSexes = new ArrayList<>();
 	private List<Person> persons = new ArrayList<>();
+	private String pedestrianSeverity;
 	
+
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getAccidentDate() {
+	public Date getAccidentDate() {
 		return accidentDate;
 	}
-	public void setAccidentDate(String accidentDate) {
+	public void setAccidentDate(Date accidentDate) {
 		this.accidentDate = accidentDate;
 	}
 	public String getTime() {
@@ -43,10 +45,10 @@ public class Accident extends CommonBean {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	public short getYear() {
+	public int getYear() {
 		return year;
 	}
-	public void setYear(short year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 	public int getNumVeh() {
@@ -55,52 +57,54 @@ public class Accident extends CommonBean {
 	public void setNumVeh(int numVeh) {
 		this.numVeh = numVeh;
 	}
-	public String getEasting() {
-		return easting;
-	}
-	public void setEasting(String easting) {
-		this.easting = easting;
-	}
-	public String getNorthing() {
-		return northing;
-	}
-	public void setNorthing(String northing) {
-		this.northing = northing;
-	}
-	public float getLat() {
+	public String getLat() {
 		return lat;
 	}
-	public void setLat(float lat) {
+	public void setLat(String lat) {
 		this.lat = lat;
 	}
-	public float getLng() {
+	public String getLng() {
 		return lng;
 	}
-	public void setLng(float lng) {
+	public void setLng(String lng) {
 		this.lng = lng;
-	}
-	public String getBody() {
-		return body;
-	}
-	public void setBody(String body) {
-		this.body = body;
-	}
-	public String getBodyName() {
-		return bodyName;
-	}
-	public void setBodyName(String bodyName) {
-		this.bodyName = bodyName;
-	}
-	public String getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(String createDate) {
-		this.createDate = createDate;
 	}
 	public List<Person> getPersons() {
 		return persons;
 	}
 	public void setPersons(List<Person> persons) {
 		this.persons = persons;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public String getSeverity() {
+		return severity;
+	}
+	public void setSeverity(String accidentSeverity) {
+		this.severity = accidentSeverity;
+	}
+	public List<Integer> getDriverAges() {
+		return driverAges;
+	}
+	public void setDriverAge(List<Integer> driverAges) {
+		this.driverAges = driverAges;
+	}
+	public List<String> getDriverSexes() {
+		return driverSexes;
+	}
+	public void setDriverSex(List<String> driverSexes) {
+		this.driverSexes = driverSexes;
+	}
+	
+	public String getPedestrianSeverity() {
+		return pedestrianSeverity;
+	}
+	
+	public void setPedestrianSeverity(String pedestrianSeverity) {
+		this.pedestrianSeverity = pedestrianSeverity;
 	}
 }
