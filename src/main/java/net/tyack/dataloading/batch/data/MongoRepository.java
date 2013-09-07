@@ -27,7 +27,7 @@ public class MongoRepository implements IRepository {
 	public void save(Map<String, Accident> accidents) throws UnknownHostException {
 		// TODO Auto-generated method stub
 		Mongo client = new MongoClient("localhost", 27017);
-		Datastore ds = new Morphia().createDatastore(client, "ncc");
+		Datastore ds = new Morphia().createDatastore(client, "tyack");
 		Iterator<String> iterator = accidents.keySet().iterator();
 		while (iterator.hasNext()) {
 			String key = iterator.next();

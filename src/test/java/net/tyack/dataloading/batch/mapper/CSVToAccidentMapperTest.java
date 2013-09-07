@@ -46,6 +46,7 @@ public class CSVToAccidentMapperTest {
 		assertEquals(expectedDate, accident1.getAccidentDate());
 		assertEquals(12, accident1.getMonth());
 		assertEquals("07:55", accident1.getTime());
+		assertEquals("AM_PEAK", accident1.getTimeCategory());
 		assertEquals(2, accident1.getNumVeh());
 		assertEquals("53.10078394", accident1.getLat());
 		assertEquals("-1.26663601", accident1.getLng());
@@ -61,6 +62,7 @@ public class CSVToAccidentMapperTest {
 		
 		// check fatal accident with 2 persons
 		Accident accident2 = map.get("4B267112");
+		assertEquals("PM_OFF_PEAK", accident2.getTimeCategory());
 		assertEquals("Fatal", accident2.getSeverity());
 		assertEquals(1, accident2.getDriverAges().size());
 		assertEquals(26, accident2.getDriverAges().get(0));
@@ -69,6 +71,7 @@ public class CSVToAccidentMapperTest {
 		
 		// check slight accident with 2 drivers. Decided to choose youngest one
 		Accident accident3 = map.get("4C248312");
+		assertEquals("EARLY_EVENING", accident3.getTimeCategory());
 		// check for slight severity
 		assertEquals(2, accident3.getDriverAges().size());
 		assertEquals(2, accident3.getDriverSexes().size());
@@ -81,12 +84,14 @@ public class CSVToAccidentMapperTest {
 		
 		// check serious accident with 2 persons
 		Accident accident4 = map.get("2A247312");
+		assertEquals("LATE_EVENING", accident4.getTimeCategory());
 		// check for serious severity
 		assertEquals("Serious", accident4.getSeverity());
 		assertEquals(2, accident4.getPersons().size());	
 		
 		// check serious accident with 2 persons
 		Accident accident5 = map.get("4D263712");
+		assertEquals("NIGHT", accident5.getTimeCategory());
 		// check for fatal severity
 		assertEquals("Fatal", accident5.getSeverity());
 		assertEquals(3, accident5.getPersons().size());	
@@ -95,6 +100,7 @@ public class CSVToAccidentMapperTest {
 		
 		// check accident with person that has 'Unknown' age and no driver
 		Accident accident6 = map.get("2C222612");
+		assertEquals("AM_OFF_PEAK", accident6.getTimeCategory());
 		assertEquals("Slight", accident6.getSeverity());
 		assertEquals(1, accident6.getPersons().size());
 		assertEquals(-1, accident6.getPersons().get(0).getAge());
@@ -104,10 +110,12 @@ public class CSVToAccidentMapperTest {
 		
 		// check accident where pedestrian injured and severity slight
 		Accident accident7 = map.get("2D255112");
+		assertEquals("PM_PEAK", accident7.getTimeCategory());
 		assertEquals("Slight", accident7.getPedestrianSeverity());
 		
 		// check accident where pedestrian injured and severity slight
 		Accident accident8 = map.get("2C164312");
+		assertEquals("EARLY_MORNING", accident8.getTimeCategory());
 		assertEquals("Serious", accident8.getPedestrianSeverity());
 		
 		// check accident where pedestrian injured and severity slight

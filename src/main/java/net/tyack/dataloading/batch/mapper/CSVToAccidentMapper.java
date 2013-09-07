@@ -130,7 +130,7 @@ public class CSVToAccidentMapper implements ICSVToAccidentMapper {
 		}
 	}
 
-	private static Accident convertLineToAccident(String[] line) {
+	private Accident convertLineToAccident(String[] line) {
 		if (line.length == VALID_NUMBER_OF_CSV_FIELDS) {
 			Accident accident = new Accident();
 			accident.setId(line[0]);
@@ -138,6 +138,7 @@ public class CSVToAccidentMapper implements ICSVToAccidentMapper {
 			accident.setAccidentDate(nccDateAsObject);
 			accident.setMonth(getMonthInt(nccDateAsObject));
 			accident.setTime(line[7]);
+			accident.setTimeCategory(getTimeCategory(line[7]));
 			accident.setYear(Integer.parseInt(line[8]));
 			accident.setNumVeh(Integer.parseInt(line[9]));
 			accident.setLat(line[12]);
@@ -157,6 +158,35 @@ public class CSVToAccidentMapper implements ICSVToAccidentMapper {
 			return accident;
 		} else {
 			throw new IllegalArgumentException("csv line should have " + VALID_NUMBER_OF_CSV_FIELDS + " but had " + line.length);
+		}
+
+	}
+
+	/**
+	 * @param string
+	 * @return
+	 */
+	private String getTimeCategory(String time) {
+		// only interested in the hour part...
+		int hour = Integer.parseInt(time.substring(0,2));
+		if (hour >= 0 && hour <=3) {
+			return "NIGHT";
+		} else if (hour >= 4 && hour <=6) {
+			return "EARLY_MORNING";
+		} else if (hour >= 7 && hour <=8) {
+			return "AM_PEAK";
+		} else if (hour >= 9 && hour <= 11) {
+			return "AM_OFF_PEAK";
+		} else if (hour >= 12 && hour <= 15) {
+			return "PM_OFF_PEAK";
+		} else if (hour >= 16 && hour <= 17) {
+			return ("PM_PEAK");
+		} else if (hour >= 18 && hour <=20) {
+			return ("EARLY_EVENING");
+		} else if (hour >= 21 && hour <= 23) {
+			return ("LATE_EVENING");
+		} else {
+			throw new IllegalArgumentException("Bad time, couldn't work out time category");
 		}
 
 	}

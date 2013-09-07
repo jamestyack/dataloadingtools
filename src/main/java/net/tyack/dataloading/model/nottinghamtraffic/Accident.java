@@ -16,15 +16,17 @@ public class Accident extends CommonBean {
 	private Date accidentDate;
 	private String severity;
 	private String time;
+	private String timeCategory;
 	private int month;
 	private int year;
 	private int numVeh;
 	private String lat;
 	private String lng;
+	private String pedestrianSeverity;
 	private List<Integer> driverAges = new ArrayList<>();
 	private List<String> driverSexes = new ArrayList<>();
 	private List<Person> persons = new ArrayList<>();
-	private String pedestrianSeverity;
+	
 	
 
 	public String getId() {
@@ -106,5 +108,13 @@ public class Accident extends CommonBean {
 	
 	public void setPedestrianSeverity(String pedestrianSeverity) {
 		this.pedestrianSeverity = pedestrianSeverity;
+	}
+	
+	public String getTimeCategory() {
+		return timeCategory;
+	}
+	
+	public void setTimeCategory(String timeCategory) {
+		this.timeCategory = timeCategory;
 	}
 }
