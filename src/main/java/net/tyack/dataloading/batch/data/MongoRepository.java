@@ -11,8 +11,10 @@ import net.tyack.dataloading.model.nottinghamtraffic.Accident;
 
 import com.github.jmkgreen.morphia.Datastore;
 import com.github.jmkgreen.morphia.Morphia;
+import com.mongodb.DB;
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
 
 /**
  * @author jamestyack
@@ -23,9 +25,7 @@ public class MongoRepository implements IRepository {
 	/* (non-Javadoc)
 	 * @see net.tyack.dataloading.batch.data.IRepository#save(java.util.Map)
 	 */
-	@Override
 	public void save(Map<String, Accident> accidents) throws UnknownHostException {
-		// TODO Auto-generated method stub
 		Mongo client = new MongoClient("localhost", 27017);
 		Datastore ds = new Morphia().createDatastore(client, "tyack");
 		Iterator<String> iterator = accidents.keySet().iterator();
