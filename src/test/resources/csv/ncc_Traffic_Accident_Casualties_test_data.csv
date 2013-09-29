@@ -1,0 +1,24 @@
+REFERENCE,PERSON_REF,SEVERITY,SEX,TYPE,AGE,ACC_DATE,TIME,YEAR,NUM_VEH,EASTING,NORTHING,LAT,LONG,BODY,BODY_NAME,CREATE_DAT
+4B267212,1,Fatal,Male,Driver or rider,64,20121218,19:26,2012,1,480306,346618,53.01086666,-0.80454932,http://data.ordnancesurvey.co.uk/doc/7000000000008100,Newark and Sherwood District Council,20130523
+4B267112,1,Fatal,Male,Vehicle or pillion passenger,21,20121218,13:05,2012,1,460212,374725,53.26612035,-1.09872157,http://data.ordnancesurvey.co.uk/doc/7000000000008122,Bassetlaw District Council,20130523
+4B267112,2,Serious,Male,Driver or rider,26,20121218,13:05,2012,1,460212,374725,53.26612035,-1.09872157,http://data.ordnancesurvey.co.uk/doc/7000000000008122,Bassetlaw District Council,20130523
+4D263712,1,Slight,Female,Driver or rider,50,20121217,00:55,2012,1,467735,333703,52.89652376,-0.99457330,http://data.ordnancesurvey.co.uk/doc/7000000000007731,Rushcliffe Borough Council,20130523
+4D263712,2,Fatal,Male,Vehicle or pillion passenger,7,20121217,00:55,2012,1,467735,333703,52.89652376,-0.99457330,http://data.ordnancesurvey.co.uk/doc/7000000000007731,Rushcliffe Borough Council,20130523
+4D263712,3,Slight,Female,Vehicle or pillion passenger,4,20121217,00:55,2012,1,467735,333703,52.89652376,-0.99457330,http://data.ordnancesurvey.co.uk/doc/7000000000007731,Rushcliffe Borough Council,20130523
+4C248312,1,Slight,Male,Driver or rider,46,20121211,18:22,2012,2,456880,342014,52.97248099,-1.15445854,http://data.ordnancesurvey.co.uk/doc/7000000000038857,Nottingham City Council,20130523
+4C248312,2,Slight,Male,Driver or rider,37,20121211,18:22,2012,2,456880,342014,52.97248099,-1.15445854,http://data.ordnancesurvey.co.uk/doc/7000000000038857,Nottingham City Council,20130523
+2D264012,1,Slight,Female,Vehicle or pillion passenger,10,20121211,16:30,2012,2,458171,336554,52.92326709,-1.13621438,http://data.ordnancesurvey.co.uk/doc/7000000000007731,Rushcliffe Borough Council,20130523
+2B269712,1,Slight,Female,Driver or rider,12,20121211,19:00,2012,2,480190,352452,53.06331507,-0.80482908,http://data.ordnancesurvey.co.uk/doc/7000000000008100,Newark and Sherwood District Council,20130523
+2A254912,1,Slight,Male,Driver or rider,17,20121211,07:55,2012,2,449201,356204,53.10078394,-1.26663601,http://data.ordnancesurvey.co.uk/doc/7000000000007969,Ashfield District Council,20130523
+2B267912,1,Slight,Male,Vehicle or pillion passenger,65,20121210,16:20,2012,2,480041,355045,53.08664092,-0.80640784,http://data.ordnancesurvey.co.uk/doc/7000000000008100,Newark and Sherwood District Council,20130523
+2A268910,1,Slight,Male,Driver or rider,46,20101113,08:55,2010,2,450030,360730,53.14138773,-1.25355167,http://data.ordnancesurvey.co.uk/doc/7000000000007969,Ashfield District Council,20130523
+2A247312,1,Serious,Male,Driver or rider,33,20121117,21:37,2012,2,449626,359379,53.12928235,-1.25979932,http://data.ordnancesurvey.co.uk/doc/7000000000007969,Ashfield District Council,20130523
+2A266112,3,Slight,Female,Vehicle or pillion passenger,22,20121117,06:16,2012,2,449848,357744,53.11456594,-1.25673524,http://data.ordnancesurvey.co.uk/doc/7000000000007969,Ashfield District Council,20130523
+2A247312,2,Slight,Female,Driver or rider,40,20121117,21:37,2012,2,449626,359379,53.12928235,-1.25979932,http://data.ordnancesurvey.co.uk/doc/7000000000007969,Ashfield District Council,20130523
+2C222612,1,Slight,Female,Vehicle or pillion passenger,Unknown,20121210,11:05,2012,1,453127,339976,52.95454688,-1.21067230,http://data.ordnancesurvey.co.uk/doc/7000000000038857,Nottingham City Council,20130523
+2D255112,1,Slight,Female,Vehicle or pillion passenger,66,20121124,16:54,2012,1,459388,344960,52.99868862,-1.11657661,http://data.ordnancesurvey.co.uk/doc/7000000000007914,Gedling Borough Council,20130523
+2D255112,1,Slight,Female,Pedestrian,66,20121124,16:54,2012,1,459388,344960,52.99868862,-1.11657661,http://data.ordnancesurvey.co.uk/doc/7000000000007914,Gedling Borough Council,20130523
+2D255112,2,Slight,Female,Driver or rider,80,20121124,16:54,2012,1,459388,344960,52.99868862,-1.11657661,http://data.ordnancesurvey.co.uk/doc/7000000000007914,Gedling Borough Council,20130523
+2C164312,1,Serious,Female,Pedestrian,19,20121108,04:38,2012,1,458991,339938,52.95359393,-1.12340483,http://data.ordnancesurvey.co.uk/doc/7000000000038857,Nottingham City Council,20130523
+4B191412,1,Fatal,Male,Pedestrian,10,20120922,16:57,2012,1,480291,354091,53.07802977,-0.80291392,http://data.ordnancesurvey.co.uk/doc/7000000000008100,Newark and Sherwood District Council,20130523
+4B191412,1,Slight,Male,Pedestrian,15,20120922,16:57,2012,1,480291,354091,53.07802977,-0.80291392,http://data.ordnancesurvey.co.uk/doc/7000000000008100,Newark and Sherwood District Council,20130523
